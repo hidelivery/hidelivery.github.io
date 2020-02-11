@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Hi Delivery</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" href="./bootstrap-material/css/bootstrap-material-design.css">
+    <link rel="stylesheet" href="./bootstrap-material/css/ripples.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <!-- Theme CSS -->
+    <link href="./css/creative.css" rel="stylesheet">
+    <link href="./vendor/nouislider/nouislider.css" rel="stylesheet">
+
+</head>
+<body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src="./img/logo_svg/rainbow.svg" style="width:40px; margin-top:10px;" alt="">
+                <a class="navbar-brand" href="./index.html">Hi Delivery</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="./index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="./features.html">Features</a>
+                    </li>
+                    <li>
+                        <a class="active" href="./pricing.html">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section class="bg-primary" id="signup">
+        <div class="container">
+            <div class="row" style="margin-bottom:40px;">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                  <img class="img-responsive center-block" src="./img/logo_svg/white_hd.svg" alt="" style="max-height:300px;">
+                    <h1 class="section-heading">Subscription Pricing</h1>
+                    <hr class="light">
+                    <h4>Pay as you grow plans.</h4>
+                    <h4>No setup fees.</h4>
+                    <h4>Free SMS messaging.</h4>
+                    <h4>Free Delivery Mapping Logistics.</h4>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="well">
+
+                    <!-- <p style="color:#222">Hi Delivery Platform lets you manage your inventory, customers, orders, and deliveries all from one simple site.</p> -->
+                    <br>
+                    <h1 class="text-center" style="color:#222" id="plan_name">Enterprise</h1>
+                    <hr>
+                    <h4 class="text-center" style="color:#222"> <span id="members"></span> active members / month</h4>
+                    <!-- <h4 class="text-center" style="color:#222"> - 14 Day Free Trail</h4> -->
+                    <br>
+                    <br>
+                    <div class="slider shor slider-material-orange" id="price_slide"></div>
+                    <br>
+                    <br>
+                    <p style="color:#898989">Number of active monthly members</p>
+                    <hr>
+                    <h3 class="text-center" style="color:#222"><span id="price"></span></h3>
+                </div>
+              </div>
+        </div>
+
+        <div class="row text-center" style="margin-top:30px;">
+            <button class="btn btn-default btn-xl sr-button"><a href="./features.html">See Features</a> </button>
+        </div>
+    </section>
+
+    <div class="row">
+      <img class="img-responsive center-block" src="./img/logo_svg/rainbow.svg" alt="" style="max-height:100px;">
+      <!-- <hr class="primary"> -->
+    </div>
+
+    <!-- jQuery -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Material Design javascript -->
+    <script type="text/javascript" src="./bootstrap-material/js/ripples.min.js"></script>
+    <script type="text/javascript" src="./bootstrap-material/js/material.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="./vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="./vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <script src="./vendor/nouislider/nouislider.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="./js/creative.min.js"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      $.material.init();
+      console.log('ready eddie');
+      //Slider
+      var slider = document.getElementById('price_slide');
+
+      var plans = {
+        25: {
+          name: "Seedling Plan",
+          price: "$150 / month",
+          members: 25
+        },
+        50: {
+          name: "Starter Plan",
+          price: "$300 / month",
+          members: 50
+        },
+        100: {
+          name: "Growth Plan",
+          price: "$450 / month",
+          members: 100
+        },
+        250: {
+          name: "Turpene Plan",
+          price: "$800 / month",
+          members: 250
+        },
+        500: {
+          name: "Canopy Plan",
+          price: "$1300 / month",
+          members: 500
+        },
+        501: {
+          name: "Enterprise Plan",
+          price: "Call us: (805) 242-1502",
+          members: "501+"
+        }
+      }
+
+      noUiSlider.create(slider, {
+      	start: 100,
+      	snap: true,
+      	range: {
+      		'min': 25,
+      		'25%': 50,
+      		'50%': 100,
+      		'75%': 250,
+      		'95%': 500,
+      		'max': 501
+      	},
+        pips: {
+      		mode: 'values',
+      		values: [25,50,100,250,500,501],
+      		density: 100,
+      		stepped: true
+      	}
+      });
+
+      slider.noUiSlider.on('update', function(){
+        var value = parseInt(slider.noUiSlider.get());
+        console.log(value);
+        $("#members").text(plans[value].members);
+        $("#price").text(plans[value].price);
+        $("#plan_name").text(plans[value].name);
+      });
+    });
+    </script>
+</body>
+
+</html>
