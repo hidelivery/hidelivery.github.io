@@ -1,5 +1,7 @@
 
-/* Fun Stuff */
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&IBM+Plex+Sans:wght@300;400;500&display=swap');
+
 .typer {
   font-family: 'Zilla Slab', serif;
 }
@@ -27,7 +29,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 hr {
   border-color: #0e9657;
@@ -53,29 +55,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
 }
 .intro-title {
-  font-weight: bold;
+  font-weight: 700;
 }
-.app-titles {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  /* font-family: 'Zilla Slab', serif; */
-  /*color: black;*/
-}
+
 .text-muted {
   color: #414141;
   padding-top: 30px;
 }
 p {
-  font-family: 'Zilla Slab', serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
   font-size: 24px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 .bg-primary {
-  /*background-color: #0e9657;*/
   background-color: #0e9657;
 }
 .bg-dark {
@@ -97,14 +95,14 @@ aside {
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Comfortaa', cursive;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
   color: #0e9657;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Comfortaa', cursive;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -201,7 +199,7 @@ header .header-content {
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -223,7 +221,6 @@ header .header-content .header-content-inner p {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    /* background-color:rgba(0, 0, 0, 0.7); */
     padding-bottom: 20px;
     border-radius: 25px;
   }
@@ -235,7 +232,6 @@ header .header-content .header-content-inner p {
   header {
     min-height: 100%;
     background-color: #1c9559;
-    /* background-image: url('/static/img/mac1.jpg'); */
   }
   header .header-content {
     position: absolute;
@@ -304,7 +300,7 @@ header .header-content .header-content-inner p {
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Comfortaa', cursive;
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -436,10 +432,12 @@ fieldset[disabled] .btn-primary.active {
   background-color: white;
 }
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 110%;
   border: none;
+  color: white;
   border-radius: 300px;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
 }
 .btn-xl {
@@ -481,4 +479,8 @@ body {
 
 .button:hover{
     background-color: (238, 238, 238, 0.5); /* Green */
+}
+.app-titles {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
 }
